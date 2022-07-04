@@ -2,9 +2,9 @@
 <template>
   <!-- 탬플레이트에는 하나의 엘리멘트만 있어야한다. -->
   <div>
-  <!--{{ str }}-->
-    <app-header></app-header>
-    <app-content></app-content>
+<!--<app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header>-->
+    <app-header v-bind:propsdata="message"></app-header>
+    <app-content v-bind:propsnum="num"></app-content>
     <app-footer></app-footer>
   </div>
 </template>
@@ -16,7 +16,8 @@ import AppFooter from "./components/AppFooter.vue";
 export default {
   data: function () {
     return {
-      str: 'hi'
+      message : 'appHeader',
+      num : 10
     }
   },
   components:{

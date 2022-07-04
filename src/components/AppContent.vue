@@ -1,10 +1,11 @@
 <template>
-<div>content</div>
+<div>{{propsnum}}</div>
 </template>
 
 <script>
 export default {
-  name: "AppContent"
+  name: "AppContent",
+  props : ['propsnum']
 }
 </script>
 
