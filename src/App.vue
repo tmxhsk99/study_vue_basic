@@ -3,7 +3,8 @@
   <!-- 탬플레이트에는 하나의 엘리멘트만 있어야한다. -->
   <div>
 <!--<app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header>-->
-    <app-header v-bind:propsdata="message"></app-header>
+    <app-header v-bind:propsdata="message"
+                v-on:renew="rewnewStr"></app-header>
     <app-content v-bind:propsnum="num"></app-content>
     <app-footer></app-footer>
   </div>
@@ -26,6 +27,11 @@ export default {
     'app-header' : AppHeader,
     'app-content' : AppContent,
     'app-footer' : AppFooter
+  },
+  methods:{
+    rewnewStr:function (){
+      this.message = 'hi'
+    }
   }
 }
 </script>
